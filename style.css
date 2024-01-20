@@ -1,0 +1,148 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: Arial, Helvetica, Sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #3e4427;
+  background: #fff7ee;
+}
+
+h1 {
+  color: #3f6d0f;
+  margin: 10px;
+  margin-left: 0;
+}
+
+header {
+  grid-area: header;
+  margin: 25px 0;
+}
+
+header img {
+  width: 100%;
+  border-radius: 4px;
+}
+
+aside {
+  grid-area: menu;
+  float: right;
+  margin: 0 0 25px;
+}
+
+aside nav ul {
+  list-style: none;
+}
+
+aside nav ul li {
+  margin-bottom: 1px;
+}
+
+aside nav ul li a {
+  display: block;
+  color: #000;
+  background: #c9c1be;
+  padding: 8px 20px;
+  margin: 16px;
+  border-radius: 12px;
+}
+
+aside nav ul li a:hover {
+  background: #26313b;
+  color: #e0d8d5;
+}
+
+#main {
+  grid-area: main;
+  float: right;
+  margin: 0 0 25px;
+}
+
+footer {
+  grid-area: footer;
+  clear: both;
+  color: #FFF;
+  background: #646c7f;
+  padding: 15px 0 15px 30px;
+  margin: 0 0 25px;
+}
+
+.beginning {
+  grid-area: beginning;
+  text-align: center;
+  padding: 20px;
+  padding-top: 0;
+}
+.beginning h1 a {
+  text-decoration: none; 
+  color: #26313b;
+}
+.beg {
+  grid-area: beg;
+}
+
+@media (min-width: 1062px) {
+  .container { width: 1050px;}
+  aside {width: 30%;}
+  #main {width: 65%;}
+  textarea {width: 100%;}
+}
+
+@media (max-width: 1062px) and (min-width: 1002px) {
+  .container {width: 950px;}
+  aside {width: 30%;}
+  #main {width: 65%;}
+  textarea {width: 100%;}
+}
+
+@media (max-width: 1002px) and (min-width: 802px) {
+  .container {width: 90%;}
+  aside { width: 30%;}
+  #main {width: 65%;}
+  textarea {width: 100%;}
+}
+
+@media (max-width: 802px) and (min-width: 462px) {
+  .container {
+    width: 90%;
+    display: grid;
+    grid-template-areas: 
+    "beg"
+    "main"
+    "menu"
+    "header"
+    "footer"
+    "beginning";}
+  aside,
+  #main {width: 100%;}
+  textarea {width: 100%;}
+}
+
+@media (max-width: 462px) {
+  aside,
+  #main {width: 100%;}
+  textarea {width: 100%;}
+  .container {
+    width: 90%;
+    display: grid;
+    grid-template-areas: 
+    "beg"
+    "main"
+    "menu"
+    "header"
+    "footer"
+    "beginning";}
+}
